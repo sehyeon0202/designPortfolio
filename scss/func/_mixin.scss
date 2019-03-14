@@ -26,19 +26,7 @@
     overflow: hidden;
 }
 
-@mixin tabBtn($wid:220px, $ht:30px, $color:#000,$bg:#fff){
-    display: block; 
-    width:$wid;
-    height:$ht; 
-    line-height:$ht;
-    color: $color;
-    text-align: center; letter-spacing: 0.7px; transition:all 0.3s;
-    font-size:13px;
-    font-family:  'arial'; 
-    background: $bg;
-    border: 0.5px solid #000; box-sizing: border-box;
-    
-}
+
 
 @mixin rwd($wid){
     @media screen and (max-width:$wid){

@@ -100,14 +100,14 @@
                 &.on{
                  
                   a{
-                    @include tabBtn($color:#fff,$bg:#000);
+                   color:#fff; background:#000;
                       
                   }
               }
               &:hover{
                   
                   a{
-                    @include tabBtn($color:#fff,$bg:#000);
+                    color:#fff; background:#000;
                   } 
               }
                 }
@@ -125,73 +125,90 @@
             &:nth-of-type(2) {background: url(../img/pradaTab1.jpg) no-repeat center center; background-size: cover;}
             }
           }
-        }
-        .tab{ width:460px; height:410px; float:left; box-sizing:border-box;
-          position:relative;  
+        }//slider
+        .tab{ width:460px; height:410px; float:left; box-sizing:border-box; position:relative; 
           ul{
             width:100%; height: 100%;
             li{
               width:100%; height: 100%; opacity: 0;
-              position: absolute; top:0; left:0;
-              div{
-                 position:absolute; transition:1s; opacity:0; transform:translateX(800px);
+              position: absolute; top:0; left:0; 
+              &#tabView1{
+                 .con11{
+                  position:absolute; transition:1s 0.2s; opacity:0;transform:translateX(800px);
+                   width:220px; height:254px; 
+                   top:103px; left:0px; background:url(../img/prada2.jpg) no-repeat 75% 50%; background-size: cover; margin-right:20px;  
+                  }
+                 .con12{
+                  position:absolute; transition:1s 0.1s; opacity:0;transform:translateX(800px);
+                   width:220px; height:100%; right:0; top:0;
+                   .conImg{
+                     width:100%; height: 195px; top:0; left:0; background:url(../img/prada3.jpg) no-repeat 50% 50%; background-size: cover; z-index: 3
+                   }
+                   .conTxt{
+                     width:100%;  height:100%; top:195px;  
+                     text-align: center; font: 13px/1.5 'arial'; 
+                     padding:19px 9px; box-sizing: border-box; color:#666;
+                   }
+ 
+ 
+                 }
+                 .con13{
+                  position:absolute; transition:1s 0.3s; opacity:1;transform:translateX(800px) rotate(230deg);
+                   width:180px; height:220px; position: absolute; top:32px; left:-91px;  z-index:6;
+                   span{
+                     display: block;
+                   width:100%; height:100%; background: 
+                   url(../img/prada4.png)no-repeat 50% 50%;  background-size: contain; 
+                   }  
+                 }
+              &.on{
+                opacity:1;  z-index:3;
+                &>div{opacity:1; transform:translateX(0px);}
+              }   
+              }//#tabView1
+              &#tabView2{
                 
-                &:nth-of-type(1){
-                  width:220px; height:254px; 
-                  top:103px; left:0px; background:url(../img/prada2.jpg) no-repeat 75% 50%; background-size: cover; margin-right:20px;  
-                }
-                &:nth-of-type(2){
-                  width:220px; height:100%; right:0; top:0;
-                  .conImg{
-                    width:100%; height: 195px; top:0; left:0; background:url(../img/prada3.jpg) no-repeat 50% 50%; background-size: cover; z-index: 3
-                  }
-                  .conTxt{
-                    width:100%;  height:100%; top:195px;  
-                    text-align: center; font: 13px/1.5 'arial'; 
-                    padding:19px 9px; box-sizing: border-box; color:#666;
-                  }
+                 .con21{
+                  position:absolute; transition:1s 0.2s; opacity:0;transform:translateX(800px); 
+                   width:220px; height:254px; 
+                   top:103px; left:0px; background:url(../img/subSm4.jpg) no-repeat 50% 50%; background-size: cover; margin-right:20px;  
+                 }
+                 .con22{
+                  position:absolute; transition:1s 0.1s; opacity:0;transform:translateX(800px); 
+                   width:220px; height:100%; right:0; top:0;
+                   .conImg{
+                     width:100%; height:195px ; top:0; left:0; background:url(../img/pradaTab11.jpg) no-repeat 50% 50%; background-size: cover; z-index: 3
+                   }
+                   .conTxt{
+                     width:100%;  height:100%; top:195px;  
+                     text-align: center; font: 13px/1.5 'arial'; 
+                     padding:19px 9px; box-sizing: border-box; color:#666;
+                   }
+ 
+ 
+                 }
+                 .con23{
+                  position:absolute; transition:1s 0.3s; opacity:0;transform:translateX(800px) rotate(-220deg); 
+                   width:235px; height:280px; position: absolute; top:-41px; left:-121px;  z-index:6;
+                   span{
+                     display: block;
+                   width:100%; height:100%; background: 
+                   url(../img/pradaTab12.png)no-repeat 50% 50%;  background-size: contain; 
+                   }  
+                 }
+ 
+                 &.on{
+                  opacity:1;  z-index:3;
+                  &>div{opacity:1; transform:translateX(0px);}
+                }   
+             
+              }//#tabView2
+              
+            }//li 
+          }//ul
+        }//tab
 
-
-                }
-                &:nth-of-type(3){
-                  width:180px; height:220px; position: absolute; top:32px; left:-91px;  z-index:6;
-                  span{
-                    display: block;
-                  width:100%; height:100%; background: 
-                  url(../img/prada4.png)no-repeat 50% 50%;  background-size: contain; 
-                  }  
-                }
-
-              }
-
-              &.on {
-                opacity:1;
-                div{opacity:1;transform:translateX(0px);}
-              }
-              &:nth-of-type(1){
-                div{ }
-              }
-              &:nth-of-type(2){
-                div.con21{
-                  background:url(../img/subSm4.jpg) no-repeat 50% 50%; background-size: cover;
-                }
-                div.con22{
-                  .conImg{
-                    background:url(../img/pradaTab11.jpg) no-repeat 50% 50%; background-size: cover;
-                  }
-                }
-                .absAni{
-                  span{
-                    background:url(../img/pradaTab12.png) no-repeat 50% 50%; background-size: cover; 
-                  }
-                }
-              }
-            }//li
-            
-          }
-        }
-
-      }
+      }//tabWrap
       
     }
     #con3{
@@ -450,44 +467,104 @@
              width:38%; height:380px;  margin:0% 9% 0% 1%;
              
             }
-            .tab{ width:51%; height:380px; float:left; box-sizing:border-box; margin-right:1%;
-              position:relative;  
+            .tab{ 
+              width:51%; height:380px; float:left; box-sizing:border-box; margin-right:1%;
+              position:relative; 
               ul{
                 width:100%; height: 100%;
                 li{
-                  width:100%; height: 100%; 
-                 
-                  div{
-                     transform:translateX(800px);
-                    
-                    &:nth-of-type(1){
-                      width:49%; height:234px; 
-                      top:103px; left:0px;  margin-right:2%;  
-                    }
-                    &:nth-of-type(2){
-                      width:49%; height:100%; right:0; top:0;
-                      .conImg{
-                        height: 185px; top:0; left:0; 
+                  width:100%; height: 100%; opacity: 0;
+                  position: absolute; top:0; left:0; 
+                  &#tabView1{
+                     .con11{
+                      position:absolute; transition:1s 0.2s; opacity:0;transform:translateX(800px);
+                        background:url(../img/prada2.jpg) no-repeat 75% 50%; background-size: cover; 
+                       width:49%; height:234px; 
+                       top:103px; left:0px;  margin-right:2%;  
+
                       }
-                      .conTxt{
-                        top:185px;  
+                     .con12{
+                      position:absolute; transition:1s 0.1s; opacity:0;transform:translateX(800px);
+                       width:49%; height:100%; right:0; top:0;
+                       .conImg{
+                         width:100%; background:url(../img/prada3.jpg) no-repeat 50% 50%; 
+                         background-size: cover; z-index: 3;
+                         height: 185px; top:0; left:0; 
+                       }
+                       .conTxt{
+                         width:100%;  height:100%; 
+                         text-align: center;
+                         box-sizing: border-box; color:#666;
+                         top:185px;  
                         font: 13px/1.5 'arial'; 
                         padding:19px 9px;
-                      }
-    
-    
-                    }
-                    &:nth-of-type(3){
-                      width:25%; height:190px; top:32px; left:-71px; 
+                       }
+     
+     
+                     }
+                     .con13{
+                      position:absolute; transition:1s 0.3s; opacity:1;transform:translateX(800px) rotate(230deg);
+                       position: absolute;  z-index:6;
+                       width:25%; height:190px; top:32px; left:-71px;
+                       span{
+                         display: block;
+                       width:100%; height:100%; background: 
+                       url(../img/prada4.png)no-repeat 50% 50%;  background-size: contain; 
+                       }  
+                     }
+                  &.on{
+                    opacity:1;  z-index:3;
+                    &>div{opacity:1; transform:translateX(0px);}
+                    }   
+                  }//#tabView1
+                  &#tabView2{
+                    
+                     .con21{
+                      position:absolute; transition:1s 0.2s; opacity:0;transform:translateX(800px); 
                        
-                    }
-    
-                  }
-    
-                }//li
-                
-              }
-            }
+                        background:url(../img/subSm4.jpg) no-repeat 50% 50%; background-size: cover; 
+                       width:49%; height:234px; 
+                       top:103px; left:0px;  margin-right:2%;   
+                     }
+                     .con22{
+                      position:absolute; transition:1s 0.1s; opacity:0;transform:translateX(800px); 
+                       width:49%; height:100%; right:0; top:0;
+                       .conImg{
+                         width:100%; background:url(../img/pradaTab11.jpg) no-repeat 50% 50%; background-size: cover; z-index: 3; height: 185px; top:0; left:0;
+                       }
+                       .conTxt{
+                        width:100%;  height:100%; 
+                        text-align: center;
+                        box-sizing: border-box; color:#666;
+                        top:185px; font: 13px/1.5 'arial'; 
+                       padding:19px 9px;
+                       }
+     
+     
+                     }
+                     .con23{
+                      position:absolute; transition:1s 0.3s; opacity:0;transform:translateX(800px) rotate(-220deg); 
+                        position: absolute; top:-18px; left:-144px;  z-index:6;
+                       width:68%; height:210px; 
+                       span{
+                         display: block;
+                       width:100%; height:100%; background: 
+                       url(../img/pradaTab12.png)no-repeat 50% 50%;  background-size: contain; 
+                       }  
+                     }
+     
+                     &.on{
+                      opacity:1;  z-index:3;
+                      &>div{opacity:1; transform:translateX(0px);}
+                    }   
+                 
+                  }//#tabView2
+                  
+                }//li 
+              }//ul
+            }//tab
+            
+           
     
           }//tabWrap
         
@@ -728,47 +805,86 @@
              }
              
             }
-            .tab{ width:100%; height:190px; float:none; box-sizing:border-box; margin-right:0%;
-              position:relative;  
+            .tab{ 
+              width:100%; height:190px; float:none; box-sizing:border-box; margin-right:0%;
+              position:relative; 
               ul{
                 width:100%; height: 100%;
                 li{
-                  width:100%; height: 100%; 
-                 
-                  div{
-                     transform:translateX(800px);
+                  width:100%; height: 100%; opacity: 0;
+                  position: absolute; top:0; left:0; 
+                  &#tabView1{
+                     .con11{
+                       display: none;
+                      }
+                     .con12{
+                      position:absolute; transition:1s 0.1s; opacity:1;transform:translateX(800px);
+                       width:100%; height:185px; right:0; top:0; left:0;
+                       .conImg{
+                         position: absolute;
+                         width:50%; height: 100%; top:0; left:0;  background:url(../img/prada3.jpg) no-repeat 50% 50%; 
+                         background-size: cover; z-index: 3;
+                         
+                       }
+                       .conTxt{
+                         width:50%;  height:100%; top:0px; margin-left:50%;  
+                         text-align: center;
+                         box-sizing: border-box; color:#666;
+                        font: 13px/1.5 'arial'; 
+                        padding:19px 9px; border: 1px solid #f1f1f1;
+                       }
+     
+     
+                     }
+                     .con13{
+                       display: none;
                     
-                    &:nth-of-type(1){
-                      width:0%; height:0px; 
-                      top:103px; left:0px;  margin-right:2%;  
-                    }
-                    &:nth-of-type(2){
-                      width:100%; height:100%; right:0; top:0;
+                     }
+                  &.on{
+                    opacity:1;  z-index:3;
+                    &>div{opacity:1; transform:translateX(0px);}
+                    }   
+                  }//#tabView1
+                  &#tabView2{
+                    
+                    .con21{
+                      display: none;
+                     }
+                    .con22{
+                     position:absolute; transition:1s 0.1s; opacity:1;transform:translateX(800px);
+                      width:100%; height:185px; right:0; top:0; left:0;
                       .conImg{
-                        width:50%;
-                        height: 185px; top:0; left:0; 
+                        position: absolute;
+                        width:50%; height: 100%; top:0; left:0;  background:url(../img/pradaTab11.jpg) no-repeat 50% 50%; 
+                        background-size: cover; z-index: 3;
+                        
                       }
                       .conTxt{
-                        width:50%; height: 185px;
-                        top:0px;  right:0;
-                        font: 13px/1.5 'arial'; box-sizing:border-box;
-                        padding:19px 9px; border: 1px solid #f1f1f1;
+                        width:50%;  height:100%; top:0px; margin-left:50%;  
+                        text-align: center;
+                        box-sizing: border-box; color:#666;
+                       font: 13px/1.5 'arial'; 
+                       padding:19px 9px; border: 1px solid #f1f1f1;
                       }
     
     
                     }
-                    &:nth-of-type(3){
+                    .con23{
                       display: none;
-                      width:25%; height:190px; top:32px; left:-71px; 
-                       
+                   
                     }
-    
-                  }
-    
-                }//li
-                
-              }
-            }
+     
+                     &.on{
+                      opacity:1;  z-index:3;
+                      &>div{opacity:1; transform:translateX(0px);}
+                    }   
+                 
+                  }//#tabView2
+                  
+                }//li 
+              }//ul
+            }//tab
+           
     
           }//tabWrap
            

@@ -1,0 +1,49 @@
+
+@mixin menuFont($size:12px,$fontColor:#fff, $fontFamily:arial,$ht:71px,$bg:transparent){
+    display: block; 
+    width:100%; 
+    height: $ht;
+    line-height:$ht; 
+    color:$fontColor;    
+    text-align: center;  
+    font-size: $size;
+    font-family: $fontFamily; 
+    transition: 0.2s;
+    background: $bg;
+    
+}
+
+@mixin showMenuBtn($wid:21px,$top:25px, $right:35px){
+    display: block; 
+    position: absolute; 
+    width:$wid; 
+    height:$wid; 
+    top:$top;
+    right:$right; 
+    background: url(../img/btn-plus.png) no-repeat center; 
+    z-index: 10;
+    text-indent: -9999px; 
+    overflow: hidden;
+}
+
+@mixin tabBtn($wid:220px, $ht:30px, $color:#000,$bg:#fff){
+    display: block; 
+    width:$wid;
+    height:$ht; 
+    line-height:$ht;
+    color: $color;
+    text-align: center; letter-spacing: 0.7px; transition:all 0.3s;
+    font-size:13px;
+    font-family:  'arial'; 
+    background: $bg;
+    border: 0.5px solid #000; box-sizing: border-box;
+    
+}
+
+@mixin rwd($wid){
+    @media screen and (max-width:$wid){
+        @content;
+    }
+}
+
+

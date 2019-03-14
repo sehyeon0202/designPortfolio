@@ -1,0 +1,16 @@
+@import './func/reset';
+@import './func/mixin';
+@import './component/header';
+@import './component/visual';
+@import './component/contents';
+//@import './component/tabs';
+@import './component/footer';
+
+.wrap{width: 100%; overflow: hidden; font-style: 'arial';} 
+
+/*mobile*/
+@include rwd(740px){ 
+  .wrap{width: 100%; overflow: hidden;} 
+  
+}/*rwd*/
+

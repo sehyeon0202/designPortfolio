@@ -552,7 +552,6 @@ a {
     .contents .con1Wrap #con1 {
       width: 940px;
       margin: 0 auto;
-      overflow: hidden;
       position: relative;
       z-index: 6; }
       .contents .con1Wrap #con1::after {
@@ -581,15 +580,15 @@ a {
             line-height: 56px;
             height: 56px;
             position: absolute;
-            top: -56px;
-            left: 0;
-            transition: all 0.5s; }
+            top: 0px;
+            left: 0px;
+            opacity: 0; }
             .contents .con1Wrap #con1 .noticeBox ul.notice_list li a {
               color: #333;
               font-size: 14px;
               font-family: 'arial','Nanum Gothic','dotum','AppleSDGothic', 'AppleGothic',sans-serif; }
-            .contents .con1Wrap #con1 .noticeBox ul.notice_list li.active {
-              top: 0px; }
+            .contents .con1Wrap #con1 .noticeBox ul.notice_list li.on {
+              opacity: 1; }
         .contents .con1Wrap #con1 .noticeBox .btn_pause {
           display: block;
           width: 20px;
@@ -633,7 +632,46 @@ a {
     width: 940px;
     margin: 0px auto;
     padding: 110px 0 80px;
-    background: #fff; }
+    background: #fff;
+    position: relative; }
+    .contents #con2 .icon {
+      width: 380px;
+      height: 380px;
+      position: absolute;
+      top: 0%;
+      left: -26%;
+      opacity: 0.1; }
+      .contents #con2 .icon > svg {
+        transform: translate(-50%, -50%) scale(0.9) rotate(-180deg);
+        position: absolute;
+        top: 50%;
+        left: 50%; }
+        .contents #con2 .icon > svg > path {
+          fill: rgba(0, 0, 0, 0);
+          stroke: #000;
+          stroke-width: 2;
+          stroke-dasharray: 1422;
+          stroke-dashoffset: 1422;
+          transition: stroke-dashoffset 3s 0s, fill 3s 1s; }
+    .contents #con2 .icon2 {
+      width: 380px;
+      height: 380px;
+      position: absolute;
+      bottom: 10%;
+      right: -26%;
+      opacity: 0.2; }
+      .contents #con2 .icon2 > svg {
+        transform: translate(-50%, -50%) scale(0.7);
+        position: absolute;
+        top: 50%;
+        left: 50%; }
+        .contents #con2 .icon2 > svg > path {
+          fill: rgba(0, 0, 0, 0);
+          stroke: #000;
+          stroke-width: 2;
+          stroke-dasharray: 1422;
+          stroke-dashoffset: 1422;
+          transition: stroke-dashoffset 3s 0s, fill 3s 1s; }
     .contents #con2 h3 {
       width: 940px;
       text-align: center; }
@@ -917,7 +955,10 @@ a {
           display: block;
           width: 100%;
           height: 100%;
-          padding-left: -20px; }
+          padding-left: -20px;
+          transition: 0.3s; }
+          .contents #con3 ul.iconSec li a:hover span img {
+            transform: rotate(90deg); }
           .contents #con3 ul.iconSec li a span {
             display: block;
             width: 150px;
@@ -927,18 +968,18 @@ a {
               width: 80px;
               height: 80px;
               display: block;
-              background-color: #000;
               margin: 0 auto;
-              border-radius: 40px;
+              transform: rotate(0deg);
+              transition: 0.3s;
               /*background: url(../img/iconImg.png) no-repeat 50% 50%; background-size: cover;*/ }
           .contents #con3 ul.iconSec li a dl {
             width: 100%; }
             .contents #con3 ul.iconSec li a dl dt {
-              font-size: 15px;
+              font-size: 14px;
               text-align: center;
               color: #222; }
             .contents #con3 ul.iconSec li a dl dd {
-              font: 13px/2 "arial";
+              font: 12px/2 "arial";
               text-align: center;
               padding-top: 4px;
               color: #555; }
@@ -1135,6 +1176,10 @@ a {
     width: 100%;
     padding: 100px 0 80px;
     background: #fff; }
+    .contents #con2 .icon {
+      display: none; }
+    .contents #con2 .icon2 {
+      display: none; }
     .contents #con2 h3 {
       width: 100%;
       text-align: center; }

@@ -7,7 +7,7 @@ $(document).ready(function(){
     var token = "8426882499.1677ed0.81c118e0b9a5456a8a8642d81b97e13d";
     ;
 
-    callData(url,token,10);
+    callData(url,token,12);
     //ajax 
 
     //callData
@@ -55,14 +55,14 @@ $(document).ready(function(){
     }//callData
 
         var i=0;
-        insatSlideMove(2,150)
+        insatSlideMove(2,120)
       
     $("#instaBox").on('mouseenter',function(){
         clearInterval(timer);
     });
 
     $('#instaBox').on('mouseleave',function(){
-        insatSlideMove(2,150);
+        insatSlideMove(2,120);
     });
 
     function insatSlideMove(speed,wid){

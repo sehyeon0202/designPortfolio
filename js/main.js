@@ -131,6 +131,19 @@ $(document).ready(function(){
 
     });
 
+    //#con3vidoe
+
+    $('.videoSec').on('mouseenter',function(e){
+            e.preventDefault();
+
+            var vid= $('.videoMovie').get(0);
+            vid.currentTime=0;
+            vid.play();
+
+
+
+    })
+
     
     
 

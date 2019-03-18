@@ -55,14 +55,14 @@ $(document).ready(function(){
     }//callData
 
         var i=0;
-        insatSlideMove(2,120)
+        insatSlideMove(2,150)
       
     $("#instaBox").on('mouseenter',function(){
         clearInterval(timer);
     });
 
     $('#instaBox').on('mouseleave',function(){
-        insatSlideMove(2,120);
+        insatSlideMove(2,150);
     });
 
     function insatSlideMove(speed,wid){

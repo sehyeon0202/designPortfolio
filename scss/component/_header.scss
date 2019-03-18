@@ -74,10 +74,11 @@
         @include showMenuBtn(); 
     }
     .showBtnView{
+      
       position: absolute; top:71px; left:0; width:100%; display: none;
       height:350px; background: url(../img/util-menu-bg.png); z-index: 11; transition: all 0.5s;
       &.on{
-        display: block;
+        display: none;
       }
       .inner{
         width: 270px; margin:20px auto;
@@ -99,6 +100,7 @@
 
 /*tablet*/
 @include rwd(960px){
+    .skipNavi{display:none;}
     .headerWrap{
         #header {
             width:100%; 

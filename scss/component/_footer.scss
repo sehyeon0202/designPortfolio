@@ -2,26 +2,18 @@
     width:100%; background: #2b2b2b;
    
     #footer {
-        position:relative; width:940px; height:344px; 
+        position:relative; width:940px; height:314px; 
         margin:0px auto; background: #2b2b2b;
         &::after{content: ''; display: block; clear: both;}
         .fcon1{
           width:300px; float:left;
-           margin-top:57px;
+           margin-top:67px;
           h3{
             font:bold 22px/1 "arial"; color:#fff;
             margin-bottom:18px;
           }
+          img{display: block; width:100px; height: auto; margin: 20px auto; opacity: 0.5;}
           p{font:14px/1.2 "arial"; color:#a6a6a6;}
-          ul.instaBox{
-            margin-top:14px;
-            &::after{content:''; display: block; clear: both;} 
-            li{
-              width:68px; height:68px; margin-right:8px;
-              margin-bottom:8px;
-              background: #ccc; float:left;
-            }
-          }
           span{
             font:12px/1.2 "arial"; color:#a6a6a6; 
           }
@@ -39,6 +31,9 @@
               padding-top: 19px; 
               a{
                 display: block; color: #a6a6a6; font:13px/1.2 "arial";
+                &:hover{
+                  color:#fff;
+                }
                 
               }
             }
@@ -51,6 +46,7 @@
                 display:block;
                 width:30px; height: 30px; border:0.7px solid #a6a6a6;
                 border-radius: 50%; text-align: center; 
+                &:hover{color:#fff; border-color: #fff;}
                 i{
                   text-align: center; font-size: 15px; line-height: 30px; 
                 }
@@ -70,7 +66,7 @@
             position:relative; width:96%; padding: 0 2%;height:324px; background: #2b2b2b;
             .fcon1{
               width:260px; float:left;
-               margin-top:37px;
+               margin-top:57px;
               h3{
                 font:bold 19px/1 "arial"; color:#fff;
                 

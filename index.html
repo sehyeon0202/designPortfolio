@@ -111,88 +111,60 @@
 		<div class="slideWrap"> 	
 			<div class="bg_panel">
 				<div class="bg_box">
-					<div id="bg1" class="bg">
-						<img src="./img/bgImg.png" alt="">
-					</div>
+					<div id="bg1" class="bg on"></div>
 					<div id="bg2" class="bg"></div>
 					<div id="bg3" class="bg"></div>
 					<div id="bg4" class="bg"></div>
 				</div>
 			</div>
 			<div class="letter_motion">
-				<div class="letter_box active">
-					<span>T</span>
-					<span class="active">H</span>
-					<span>E</span>
-					<span class="nbsp">&nbsp;</span>
-					<span>P</span>
-					<span>L</span>
-					<span>A</span>
-					<span>Z</span>
-					<span>A</span>  
-				</div>
-				<div class="letter_box">
-					<span>S</span>
-					<span>T</span>
-					<span>A</span>
-					<span>Y</span>
-					<span class="nbsp">&nbsp;</span>
-					<span>I</span>
-					<span>N</span>
-					<span class="nbsp">&nbsp;</span>
-					<span>A</span> 
-				</div>
-				<div class="letter_box">
-					<span>T</span>
-					<span>H</span>
-					<span>E</span>
-					<span>&nbsp;</span>
-					<span>P</span>
-					<span>L</span>
-					<span>A</span>
-					<span>Z</span>
-					<span>A</span> 
-				</div>
-				<div class="letter_box">
-					<span>T</span>
-					<span>H</span>
-					<span>E</span>
-					<span>&nbsp;</span>
-					<span>P</span>
-					<span>L</span>
-					<span>A</span>
-					<span>Z</span>
-					<span>A</span> 
-				</div>
+				<ul class="letter_box">
+					<li class="on">
+						<span>THE PRADA</span><br>
+						<span class="smSp">SS 2019 ADV Woman</span> 
+					</li>
+					<li class="">
+						<span>FW 2019</span><br>
+						<span class="smSp">SS 2019 ADV Womenswear</span>
+					</li>
+					<li>
+						<span>E-CATALOG</span><br>
+						<span class="smSp">SS 2019 ADV Woman</span>
+					</li>
+					<li>
+						<span>FW COLLECTION</span><br>
+						<span class="smSp">SS 2019 ADV Womenswear</span>
+					</li>
+				</ul>
 			</div> <!--letter_motion-->
 			<div class="slide_navi">
 				<ul class="navi_motion">
-					<li>
+					<li class="on">
 						<a href="#">
 							<div class="tl"></div>
 							<div class="br"></div>
-							<span>THE PLAZA</span>
+							<span>THE PRADA</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<div class="tl"></div>
 							<div class="br"></div>
-							<span>STAY</span>
+							<span>WOMEN</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<div class="tl"></div>
 							<div class="br"></div>
-							<span>DINE</span>
+							<span>365/SS-2019</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<div class="tl"></div>
+							<div class="tl">COLLECTION</div>
 							<div class="br"></div>	
-							<span>LIFE</span>
+							<span></span>
 						</a>
 					</li>
 				</ul>
@@ -229,7 +201,7 @@
 			<div class="icon2">
 					<svg viewBox="0 0 432 512"><path d="M407 111.9l-98.5-9 14-33.4c10.4-23.5-10.8-40.4-28.7-37L22.5 76.9c-15.1 2.7-26 18.3-21.4 36.6l105.1 348.3c6.5 21.3 36.7 24.2 47.7 7l35.3-80.8 235.2-231.3c16.4-16.8 4.3-42.9-17.4-44.8zM297.6 53.6c5.1-.7 7.5 2.5 5.2 7.4L286 100.9 108.6 84.6l189-31zM22.7 107.9c-3.1-5.1 1-10 6.1-9.1l248.7 22.7-96.9 230.7L22.7 107.9zM136 456.4c-2.6 4-7.9 3.1-9.4-1.2L43.5 179.7l127.7 197.6c-7 15-35.2 79.1-35.2 79.1zm272.8-314.5L210.1 337.3l89.7-213.7 106.4 9.7c4 1.1 5.7 5.3 2.6 8.6z"></path></svg>
 			</div>
-			<h3><img src="./img/title_2.png" alt="title1"></h3>
+			<h3><img src="./img/title_4.jpg" alt="title1"></h3>
 			<div class="tabWrap">
 				<div class="navi">
 					<ul>
@@ -273,16 +245,22 @@
 		</div>
 		<div id="con3">
 			<div class="titleBox">
-					<h3><img src="./img/title_2.png" alt="title2"></h3>
+					<h3><img src="./img/title_5.jpg" alt="title2"></h3>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 			</div>
 			
-			<div class="videoSec">video</div>
+			<div class="videoSec">
+				<span class="vBtn"><i class="fas fa-caret-right"></i></span>
+				<div class="videoImg"><img src="./img/video.jpg" alt=""></div>
+				<video class="videoMovie">
+					<source src="./img/03_ SS19_woman_1800.mp4" type="video/mp4">
+				</video>
+			</div>
 			<ul class="iconSec">
 				<li>
 					<a href="#">
 						<span>
-							<img src="./img/Uicon1.gif" alt="" >
+							<i class="fas fa-credit-card"></i>	
 						</span>
 						<dl>
 							<dt>카드등록</dt>
@@ -293,7 +271,7 @@
 				<li>
 					<a href="#">
 						<span>
-							<img src="./img/Uicon1.gif" alt="">
+							<i class="fas fa-coins"></i>
 						
 						</span>
 						<dl>
@@ -305,7 +283,7 @@
 				<li>
 					<a href="#">
 						<span>
-							<img src="./img/Uicon1.gif" alt="">
+							<i class="fab fa-forumbee"></i>
 						</span>
 						<dl>
 							<dt>보너스 포인트</dt>
@@ -316,10 +294,10 @@
 				<li>
 					<a href="#">
 						<span>
-							<img src="./img/Uicon1.gif" alt="">
+							<i class="fas fa-barcode"></i>
 						</span>
 						<dl>
-							<dt>쿠폰혜택</dt>
+							<dt>할인혜택</dt>
 							<dd>다양한 할인 혜택을 받으세요</dd>
 						</dl>
 					</a>
@@ -373,7 +351,7 @@
 	</div>
 	<div id="map">
 			<div class="titleBox">
-					<h3><img src="./img/title_4.png" alt="title3"></h3>
+					<h3><img src="./img/title_9.png" alt="title3"></h3>
 			</div>
 			<div class="mapBox" id='mapBoxView'>
 				
@@ -388,8 +366,8 @@
 		<div id="footer">	
 			<div class="fcon1">
 				<h3>Interested in our company?</h3>
+				<img src="./img/footer_logo1.png" alt="">
 				<p>Lorem ipsum dolor, sit amet consectetur </p>
-				
 				<span>ⓒ 2019Lorem ipsum dolor, sit amet consectetur </span>	
 			</div>
 			<div class="fcon2">

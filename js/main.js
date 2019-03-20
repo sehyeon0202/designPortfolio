@@ -92,7 +92,7 @@ $(document).ready(function(){
             }
                     
             ListRolling(i);
-            console.log(i);
+            //console.log(i);
 
    },2500);
 

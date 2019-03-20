@@ -1164,7 +1164,8 @@ a {
 
 #map {
   width: 100%;
-  padding: 0px 0 95px; }
+  padding: 0px 0 95px;
+  position: relative; }
   #map .titleBox {
     width: 940px;
     margin: 0px auto; }
@@ -1187,12 +1188,43 @@ a {
       #map .titleBox h3 img {
         width: 204px;
         height: auto; }
+  #map .tabN.tabN {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left; }
+    #map .tabN.tabN::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #map .tabN.tabN li {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      color: #333;
+      font-size: 12px;
+      font-family: 'arial','Nanum Gothic','dotum','AppleSDGothic', 'AppleGothic',sans-serif;
+      margin-right: 8px;
+      font-weight: 700;
+      padding: 5px 8px;
+      background: #161616;
+      border: 1px solid #161616;
+      transition: 0.5s; }
+      #map .tabN.tabN li:hover {
+        background: #fff; }
+        #map .tabN.tabN li:hover a {
+          color: #161616; }
+      #map .tabN.tabN li a {
+        color: #fff; }
   #map .mapBox {
     width: 940px;
     height: 238px;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -470px;
+    margin-top: 20px;
     border: 1px solid #ccc;
-    margin: 0 auto;
     background: #000;
     filter: grayscale(1);
     transition: 0.5s; }
@@ -1203,7 +1235,8 @@ a {
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 150px; }
+  height: 150px;
+  margin-top: 260px; }
   #instaBox ul {
     width: 2500px;
     height: 150px;

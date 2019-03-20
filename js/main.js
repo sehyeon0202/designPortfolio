@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+
+
     //mainVedio
 
         $('.video_banner_btn').on('mouseenter',function(){
@@ -9,6 +12,20 @@ $(document).ready(function(){
         $('.video_banner_btn').on('mouseleave',function(){
         $('.ani_over').stop().animate({'top':'0px'},500);
         });
+    
+      //#con3vidoe
+
+   $('.vBtn').on('click',function(){
+
+    $('.videoMovie').css({"display":"block"});
+
+    });
+
+    $('.Mclose').on('click',function(e){
+    e.preventDefault();
+    $('.videoMovie').css({'display':'none'});
+    });
+
 
 
     //탭메뉴 animation
@@ -131,19 +148,7 @@ $(document).ready(function(){
 
     });
 
-    //#con3vidoe
-
-    $('.videoSec').on('mouseenter',function(e){
-            e.preventDefault();
-
-            var vid= $('.videoMovie').get(0);
-            vid.currentTime=0;
-            vid.play();
-
-
-
-    })
-
+  
     
     
 

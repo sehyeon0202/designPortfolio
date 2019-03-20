@@ -26,6 +26,15 @@
     overflow: hidden;
 }
 
+@mixin titleFont($fontSize:27px,$fontWt:500,$lineHeight:1,$fontFm:arial,$textAlign:center){
+    font-size: $fontSize;
+    font-weight: $fontWt;
+    font-family: $fontFm;
+    line-height: $lineHeight;
+    text-align: $textAlign;
+    
+}
+
 
 
 @mixin rwd($wid){

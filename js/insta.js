@@ -5,7 +5,10 @@ $(document).ready(function(){
     var url = 'https://api.instagram.com/v1/users/self/media/recent';
  
     var token = "8426882499.1677ed0.81c118e0b9a5456a8a8642d81b97e13d";
-    ;
+    
+    var $instaBox = $("#instaBox");
+    var $instaBoxUl = $('#instaBox>ul');
+    
 
     callData(url,token,12);
     //ajax 
@@ -57,11 +60,11 @@ $(document).ready(function(){
         var i=0;
         insatSlideMove(2,150)
       
-    $("#instaBox").on('mouseenter',function(){
+        $instaBox.on('mouseenter',function(){
         clearInterval(timer);
     });
 
-    $('#instaBox').on('mouseleave',function(){
+        $instaBox.on('mouseleave',function(){
         insatSlideMove(2,150);
     });
 
@@ -70,11 +73,11 @@ $(document).ready(function(){
         
             if(i<=-wid){
                 i=0;
-                $('#instaBox>ul>li').first().appendTo('#instaBox>ul');
+                $instaBoxUl.find('li').first().appendTo($instaBoxUl);
             }else{
                 i-=speed;
             }
-            $('#instaBox>ul').css({"left":i});
+            $instaBoxUl.css({"left":i});
         
         },1000/30);
     }

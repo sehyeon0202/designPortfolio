@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 //-------------------------------------------------------//
     function mobile(){
-        $gnb.remove();
+        $('#gnb').remove();
 
         var isGnb = $("#moGnb").length;
 

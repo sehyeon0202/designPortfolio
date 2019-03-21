@@ -153,19 +153,25 @@
             .letter_motion{
                 top:36%; 
             
-                .letter_box{
-                text-align: left; margin-left:10px;
-                span{
-                    
-                    font:500 36px/0.8 "arial"; letter-spacing: 26px; 
-
-                    &.nbsp{ display: block;}
+                ul.letter_box{
+          
+                  li{
+    
+                    span{
+                      display:inline-block;/*display:none*/ font:500 46px/1.4 "arial"; letter-spacing: 35px; text-align: left; transition: all 0.5s;
+                      color:#fff; margin-bottom:48px;
+                      
+                    }
+                    .smSp{
+                      width:90%;
+                      font:500 18px/1 "arial"; letter-spacing: 8px; 
+                    }
+                  }
                 
                 }
             }
-            }
         .slide_navi{
-        bottom:20%; 
+        bottom:20%; display: none;
         ul.navi_motion{
             width:100%; padding: 0%;
             li{

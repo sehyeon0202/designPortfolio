@@ -778,8 +778,9 @@
             }
         }
       }
+      .tabN.tabN{margin-left:20px;}
       .mapBox{
-        width:100%; height:218px; 
+        width:100% !important; height:218px; margin-top: 50px; margin-left:0px !important; left: 0px !important;
       
       }
     }
@@ -1035,18 +1036,29 @@
             padding: 0px; 
             
             .titleBox{
-            width:100%;
+            width:100%; margin-top:30px;
             h3{
                 width:100%;
-                img{
-                    width:80%; 
-                }
+                @include titleFont($fontSize:21px);
             }
             p{font-size: 11px; margin:5px 0 30px; }
             }
             
             .videoSec{
             height:206px; line-height: 206px;
+            
+            .videoMovie{
+             
+              video{
+                position: absolute; top:50%; margin-top:-103px;
+              }
+              .Mclose{top:0px; right:30px;}
+            }
+           
+            .vBtn{
+              margin-top:-35px; 
+           
+            }
             }
             ul.iconSec{
             width:100%; padding: 0% 0%; margin: 37px auto 0px;
@@ -1065,7 +1077,7 @@
                 a{ 
                 width:100%; height:100%;  padding:0%; box-sizing: border-box;
                 span{
-                    width:100%; height: 100px;
+                    width:100%; height: 36px;
                 }
                 dl{
                     dt{font-size: 11px;}
@@ -1078,15 +1090,13 @@
             }  
         }
         #con4{
-            padding:0% 0 80px;
+            padding:0px;
             .titleBox{
             
             h3{
-                
-                
-                img{
-                    width:46%;
-                }
+                width:100%;
+                @include titleFont($fontSize:21px);
+           
             }
             p{font-size: 11px; margin:5px 0 30px; }
             }
@@ -1117,7 +1127,7 @@
             float:none; margin-right:0%; width:100%; height:255px;
             
             .smBox{
-                width:49%; margin-right:2%; height:255px;
+                width:49%; margin-right:2%; height:255px; display: none;
                 float: left; 
                 
                 .imgCon{
@@ -1136,19 +1146,26 @@
     
     }
     #map{
-      padding: 20px 0 55px;
+      padding: 0px;
       .titleBox{
         width:100%;
         h3{
-          width:100%; padding:20px 0;
-         
-          img{
-              width:46%;
-            }
+          width:100%;
+          @include titleFont($fontSize:21px);
         }
       }
-      .mapBox{
-        width:100%; height:188px; 
+      .tabN.tabN{
+        width:100%; text-align: center; margin-top:-8px;
+        margin-left:0px;
+        li{
+         font-size: 10px; margin-right:6px; font-weight: 700;
+         padding:5px 8px; 
+       
+         
+        }
+      }
+      &>.mapBox{
+        width:100% !important; height:180px; margin-top: 52px; margin-left:0px !important; left: 0px !important;
       
       }
     }  

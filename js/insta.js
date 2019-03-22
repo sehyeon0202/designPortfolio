@@ -10,7 +10,7 @@ $(document).ready(function(){
     var $instaBoxUl = $('#instaBox>ul');
     
 
-    callData(url,token,12);
+    callData(url,token,20);
     //ajax 
 
     //callData

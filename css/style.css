@@ -49,13 +49,13 @@ a {
   left: 0px;
   z-index: 8;
   transition: all 0.5s;
-  background: #161616; }
+  background: #000; }
   .headerWrap #header {
     position: relative;
     width: 940px;
     height: 71px;
     margin: 0px auto;
-    background: #161616;
+    background: #000;
     /*ul#gnb*/ }
     .headerWrap #header::after {
       content: "";
@@ -341,7 +341,9 @@ a {
   position: relative;
   width: 100%;
   height: 760px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  background: #111;
+  overflow: hidden; }
   #visual .slideWrap {
     width: 100%;
     height: 100%;
@@ -350,62 +352,77 @@ a {
       width: 100%;
       height: 100%;
       position: relative; }
-      #visual .slideWrap .bg_panel .bg_box {
+      #visual .slideWrap .bg_panel li {
         width: 100%;
         height: 100%;
-        position: relative; }
-        #visual .slideWrap .bg_panel .bg_box .bg {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          display: none; }
-        #visual .slideWrap .bg_panel .bg_box > .on {
-          display: block; }
-        #visual .slideWrap .bg_panel .bg_box #bg1 {
-          background: url(../img/bg1.jpg) no-repeat 50% 40%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        z-index: 1;
+        transition: all 1s;
+        font-size: 200px; }
+        #visual .slideWrap .bg_panel li.top {
+          opacity: 0;
+          transform: scale(0.5);
+          top: -100%; }
+        #visual .slideWrap .bg_panel li.on {
+          opacity: 1;
+          transform: scale(1);
+          z-index: 5;
+          top: 0%; }
+        #visual .slideWrap .bg_panel li.bottom {
+          opacity: 0;
+          transform: scale(0.5);
+          top: 100%; }
+        #visual .slideWrap .bg_panel li#p1 {
+          background: url(../img/bg1.jpg) no-repeat 50% 50%;
           background-size: 130%; }
-        #visual .slideWrap .bg_panel .bg_box #bg2 {
-          background: url(../img/bg2.jpg) no-repeat 50% 40%;
+        #visual .slideWrap .bg_panel li#p2 {
+          background: url(../img/bg2.jpg) no-repeat 50% 50%;
           background-size: 130%; }
-        #visual .slideWrap .bg_panel .bg_box #bg3 {
-          background: url(../img/bg3.jpg) no-repeat 50% 40%;
+        #visual .slideWrap .bg_panel li#p3 {
+          background: url(../img/bg3.jpg) no-repeat 50% 50%;
           background-size: 130%; }
-        #visual .slideWrap .bg_panel .bg_box #bg4 {
-          background: url(../img/bg4.jpg) no-repeat 50% 40%;
+        #visual .slideWrap .bg_panel li#p4 {
+          background: url(../img/bg4.jpg) no-repeat 50% 50%;
           background-size: 130%; }
-    #visual .slideWrap .letter_motion {
-      position: absolute;
-      left: 0%;
-      top: 50%;
-      text-align: left;
-      margin-left: 5%;
-      margin-top: -6%;
-      box-sizing: border-box;
-      width: 68%; }
-      #visual .slideWrap .letter_motion ul.letter_box {
-        opacity: 1;
-        transition: 0.5s;
-        text-align: left; }
-        #visual .slideWrap .letter_motion ul.letter_box li {
+        #visual .slideWrap .bg_panel li > p {
+          width: 80%;
           position: absolute;
-          top: 0;
-          left: 0;
-          display: none; }
-          #visual .slideWrap .letter_motion ul.letter_box li.on {
-            display: block; }
-          #visual .slideWrap .letter_motion ul.letter_box li span {
-            display: inline-block;
-            /*display:none*/
-            font: 500 66px/1 "arial";
-            letter-spacing: 45px;
-            text-align: left;
-            transition: all 0.5s;
+          left: 60px;
+          top: 40%; }
+          #visual .slideWrap .bg_panel li > p::before {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 4px;
+            background: #fff;
+            position: absolute;
+            top: -25px;
+            left: 0px;
+            transition: 0.5s 1s; }
+          #visual .slideWrap .bg_panel li > p span {
+            font: 75px/1 'arial';
             color: #fff;
-            margin-bottom: 48px; }
-          #visual .slideWrap .letter_motion ul.letter_box li .smSp {
-            width: 90%;
-            font: 500 26px/1 "arial";
-            letter-spacing: 8px; }
+            display: block;
+            float: left;
+            padding: 0px 5px;
+            letter-spacing: 3px;
+            opacity: 0;
+            transition: 1s 0.5s; }
+            #visual .slideWrap .bg_panel li > p span:nth-of-type(odd) {
+              transform: translateY(-100px); }
+            #visual .slideWrap .bg_panel li > p span:nth-of-type(even) {
+              transform: translateY(100px); }
+        #visual .slideWrap .bg_panel li.on > p::before {
+          width: 120px; }
+        #visual .slideWrap .bg_panel li.on > p > span {
+          opacity: 1; }
+        #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(odd) {
+          transform: translateY(0px); }
+        #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(even) {
+          transform: translateY(0px); }
     #visual .slideWrap .slide_navi {
       position: absolute;
       bottom: 30%;
@@ -503,42 +520,43 @@ a {
             height: 0%;
             background-color: #fff;
             transition: all 0.3s; }
+    #visual .slideWrap .btns {
+      position: absolute;
+      left: 80px;
+      bottom: 40px;
+      z-index: 5; }
+      #visual .slideWrap .btns li {
+        margin-bottom: 20px; }
+        #visual .slideWrap .btns li a {
+          color: #fff;
+          font-size: 26px; }
 
 /*tablet*/
 @media screen and (max-width: 960px) {
   #visual {
     height: 560px; }
-    #visual .slideWrap .letter_motion {
-      top: 40%; }
-      #visual .slideWrap .letter_motion .letter_box span {
-        font: 500 50px/1 "arial";
-        letter-spacing: 39px; }
-        #visual .slideWrap .letter_motion .letter_box span.nbsp {
-          letter-spacing: 25px; } }
+    #visual .slideWrap > .bg_panel > li > p {
+      width: 180%;
+      top: 30%;
+      transform-origin: left center;
+      left: 40px;
+      transform: scale(0.7); }
+    #visual .slide_navi {
+      font-size: 11px; } }
 /*mobile*/
 @media screen and (max-width: 740px) {
   #visual {
     height: 390px; }
-    #visual .slideWrap .bg_panel .bg_box #bg1 {
+    #visual .slideWrap .bg_panel li#p1 {
       background-size: cover; }
-    #visual .slideWrap .letter_motion {
-      top: 36%; }
-      #visual .slideWrap .letter_motion ul.letter_box li span {
-        display: inline-block;
-        /*display:none*/
-        font: 500 46px/1.4 "arial";
-        letter-spacing: 35px;
-        text-align: left;
-        transition: all 0.5s;
-        color: #fff;
-        margin-bottom: 48px; }
-      #visual .slideWrap .letter_motion ul.letter_box li .smSp {
-        width: 90%;
-        font: 500 18px/1 "arial";
-        letter-spacing: 8px; }
+    #visual .slideWrap .bg_panel li#p2 {
+      background-size: cover; }
+    #visual .slideWrap .bg_panel li#p3 {
+      background-size: cover; }
+    #visual .slideWrap .bg_panel li#p4 {
+      background-size: cover; }
     #visual .slideWrap .slide_navi {
-      bottom: 20%;
-      display: none; }
+      bottom: 20%; }
       #visual .slideWrap .slide_navi ul.navi_motion {
         width: 100%;
         padding: 0%; }
@@ -551,7 +569,25 @@ a {
             font-size: 10.5px;
             letter-spacing: 1px;
             text-align: center;
-            line-height: 34px; } }
+            line-height: 34px; }
+    #visual .slideWrap .bg_panel > li > p {
+      width: 180%;
+      top: 30%;
+      left: 30px;
+      transform: scale(0.4); }
+    #visual .slideWrap .btns {
+      position: absolute;
+      left: 50px;
+      bottom: 20px;
+      z-index: 5; }
+      #visual .slideWrap .btns li {
+        margin-bottom: 12px; }
+        #visual .slideWrap .btns li a {
+          font-size: 20px; }
+    #visual .slide_navi {
+      font-size: 9px;
+      text-indent: -9999px;
+      display: none; } }
 .contents {
   position: relative;
   width: 100%;
@@ -1583,7 +1619,7 @@ a {
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 120px; }
+    height: 150px; }
     #instaBox ul {
       width: 500%; }
       #instaBox ul::after {
@@ -1592,8 +1628,8 @@ a {
         clear: both; }
       #instaBox ul li {
         float: left;
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         background: #363636; }
         #instaBox ul li:nth-child(odd) {
           background: #222; }

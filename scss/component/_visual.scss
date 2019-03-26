@@ -1,18 +1,23 @@
 #visual {
-  position:relative; width:100%; height:760px;    transition:all 0.5s;
+  position:relative; width:100%; height:760px;  transition:all 0.5s; 
+
+
   background:#111; overflow:hidden;
 
     .slideWrap{
-      width:100%; height:100%; position: relative;
+      width:100%; height:100%; position: relative; transform-style: preserve-3d;
 
       .bg_panel{
-        width:100%; height:100%; position: relative;  
+        width:100%; height:100%; position: relative;  perspective: 1200px;
         li {
-          width:100%; height:100%; position:absolute; top:0px; left:0px; opacity:0; z-index:1; transition:all 1s; font-size:200px;
+          width:100%; height:100%; position:absolute; top:0px; left:0px; opacity:0; z-index:1; transition:all 1.5s; font-size:200px; 
 
-          &.top {opacity:0; transform:scale(0.5); top:-100% }
-          &.on { opacity:1; transform:scale(1); z-index:5; top:0%;}
-          &.bottom {opacity:0; transform:scale(0.5); top:100%;}
+          /*matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());*/
+          &.top {opacity:0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)scale(0.6) rotate(.001deg); -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)scale(0.6) rotate(.001deg);
+            ; top:-100%; }
+          &.on { opacity:1; transform:translate(0%, 0% 0%) scale(1) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); z-index:5; top:0%; }
+          &.bottom {opacity:0; transform: scale(0.6)  matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1) rotate(.001deg);
+            ; top:100%; opacity: 0.3;}
 
           &#p1 {background:url(../img/bg1.jpg) no-repeat 50% 50%; background-size: 130%;}
           &#p2 {background:url(../img/bg2.jpg) no-repeat 50% 50%; background-size: 130%;}
@@ -24,7 +29,7 @@
 
             &::before {
               content:''; display:block; width:0px; height:4px; background:#fff; 
-              position:absolute; top:-25px; left:0px; transition:0.5s 1s; 
+              position:absolute; top:-25px; left:0px; transition:0.5s 1.6s; 
             }
             span {
               font:75px/1 'arial'; color:#fff; display:block; float:left; padding:0px 5px; letter-spacing: 3px;

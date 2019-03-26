@@ -1,5 +1,5 @@
 #visual {
-  position:relative; width:100%; height:760px;   transition:all 2s; transform: rotate(.001deg); 
+  position:relative; width:100%; height:760px;    transition:all 0.5s;
   background:#111; overflow:hidden;
 
     .slideWrap{
@@ -8,11 +8,11 @@
       .bg_panel{
         width:100%; height:100%; position: relative;  
         li {
-          width:100%; height:100%; position:absolute; top:0px; left:0px; opacity:0; z-index:1; transition:all 1s; font-size:200px; transform: rotate(.001deg); 
+          width:100%; height:100%; position:absolute; top:0px; left:0px; opacity:0; z-index:1; transition:all 1s; font-size:200px;
 
-          &.top {opacity:0; transform:scale(0.5) rotate(.001deg); top:-100% }
-          &.on { opacity:1; transform:scale(1) rotate(.001deg); z-index:5; top:0%;}
-          &.bottom {opacity:0; transform:scale(0.5) rotate(.001deg) ; top:100%;}
+          &.top {opacity:0; transform:scale(0.5); top:-100% }
+          &.on { opacity:1; transform:scale(1); z-index:5; top:0%;}
+          &.bottom {opacity:0; transform:scale(0.5); top:100%;}
 
           &#p1 {background:url(../img/bg1.jpg) no-repeat 50% 50%; background-size: 130%;}
           &#p2 {background:url(../img/bg2.jpg) no-repeat 50% 50%; background-size: 130%;}
@@ -28,22 +28,18 @@
             }
             span {
               font:75px/1 'arial'; color:#fff; display:block; float:left; padding:0px 5px; letter-spacing: 3px;
-              opacity:0; transition:1s 0.5s; transform: rotate(.001deg); 
+              opacity:0; transition:1s 0.5s;  
 
-              &:nth-of-type(odd) {
-                transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-               }
-              &:nth-of-type(even) {
-                transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-               }           
+              &:nth-of-type(odd) {transform:translateY(-100px); }
+              &:nth-of-type(even) {transform:translateY(100px); }          
             }
           }
 
           &.on {
             &>p::before {width:120px;}
             &>p>span {  opacity:1;}             
-            &>p>span:nth-of-type(odd) {transform:translateY(0px) rotate(.001deg); }
-            &>p>span:nth-of-type(even) {transform:translateY(0px) rotate(.001deg); }            
+            &>p>span:nth-of-type(odd) {transform:translateY(0px)  }
+            &>p>span:nth-of-type(even) {transform:translateY(0px)  }            
           }
         }      
       }    
@@ -55,7 +51,7 @@
           &::after{content: '';display: block; clear: both;} 
           li{
             position: relative; width:172px;
-            height:55px; line-height: 55px; text-align: center; transition: color 0.3s; margin: 10px 0; transform: rotate(.001deg); 
+            height:55px; line-height: 55px; text-align: center; transition: color 0.3s; margin: 10px 0; ; 
             font-family: $fontFamily_arial;
             &:hover{
               a{
@@ -121,6 +117,8 @@
     }
     
 }
+
+
 
 /*tablet*/
 @include rwd(960px){

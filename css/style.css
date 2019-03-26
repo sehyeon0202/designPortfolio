@@ -341,8 +341,7 @@ a {
   position: relative;
   width: 100%;
   height: 760px;
-  transition: all 2s;
-  transform: rotate(0.001deg);
+  transition: all 0.5s;
   background: #111;
   overflow: hidden; }
   #visual .slideWrap {
@@ -362,20 +361,19 @@ a {
         opacity: 0;
         z-index: 1;
         transition: all 1s;
-        font-size: 200px;
-        transform: rotate(0.001deg); }
+        font-size: 200px; }
         #visual .slideWrap .bg_panel li.top {
           opacity: 0;
-          transform: scale(0.5) rotate(0.001deg);
+          transform: scale(0.5);
           top: -100%; }
         #visual .slideWrap .bg_panel li.on {
           opacity: 1;
-          transform: scale(1) rotate(0.001deg);
+          transform: scale(1);
           z-index: 5;
           top: 0%; }
         #visual .slideWrap .bg_panel li.bottom {
           opacity: 0;
-          transform: scale(0.5) rotate(0.001deg);
+          transform: scale(0.5);
           top: 100%; }
         #visual .slideWrap .bg_panel li#p1 {
           background: url(../img/bg1.jpg) no-repeat 50% 50%;
@@ -412,20 +410,19 @@ a {
             padding: 0px 5px;
             letter-spacing: 3px;
             opacity: 0;
-            transition: 1s 0.5s;
-            transform: rotate(0.001deg); }
+            transition: 1s 0.5s; }
             #visual .slideWrap .bg_panel li > p span:nth-of-type(odd) {
-              transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+              transform: translateY(-100px); }
             #visual .slideWrap .bg_panel li > p span:nth-of-type(even) {
-              transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+              transform: translateY(100px); }
         #visual .slideWrap .bg_panel li.on > p::before {
           width: 120px; }
         #visual .slideWrap .bg_panel li.on > p > span {
           opacity: 1; }
         #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(odd) {
-          transform: translateY(0px) rotate(0.001deg); }
+          transform: translateY(0px); }
         #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(even) {
-          transform: translateY(0px) rotate(0.001deg); }
+          transform: translateY(0px); }
     #visual .slideWrap .slide_navi {
       position: absolute;
       bottom: 30%;
@@ -445,7 +442,6 @@ a {
         text-align: center;
         transition: color 0.3s;
         margin: 10px 0;
-        transform: rotate(0.001deg);
         font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
         #visual .slideWrap .slide_navi ul.navi_motion li:hover a {
           color: white; }

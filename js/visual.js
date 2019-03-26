@@ -81,7 +81,7 @@ $(document).ready(function(){
         
         setTimeout(function(){
             $panel_li.eq(index).removeClass('bottom').addClass('on');
-        },400);
+        },500);
      }
 
     function moveDown(index){
@@ -101,7 +101,7 @@ $(document).ready(function(){
 
         setTimeout(function(){
             $panel_li.eq(index).removeClass('top').addClass('on');
-        },400); 
+        },500); 
     }
 
 

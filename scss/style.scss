@@ -1,9 +1,9 @@
 @import './func/reset';
 @import './func/mixin';
+@import './func/font';
 @import './component/header';
 @import './component/visual';
 @import './component/contents';
-//@import './component/tabs';
 @import './component/footer';
 
 .wrap{width: 100%; overflow: hidden; font-style: 'arial';} 

@@ -12,151 +12,17 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	
 	<script type="text/javascript" src="js/insta.js"></script>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ecc74fef31ee99b38e0096b9abb7aaba"></script>
-	<script>
-						
-				  
-		    window.onload = function(){
-					var lat=37.5088823;
-					var lng=127.0602669;
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=59076bc724a0b84df93ae47b8545f9fc"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<!--[if lt IE 9]>
 
-				//카카오맵에 표시될 DOM지정
-				var container = document.getElementById('mapBoxView1');
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 
-				//표시할 지역의 경도, 위도, 줌레벨 설정
-				var options = {
-						center: new daum.maps.LatLng(37.5088823, 127.0602669),
-						level: 4
-				};
-
-				//map 인스턴스 생성
-				var map = new daum.maps.Map(container, options);
-
-					// 마커를 표시할 위치와 title 객체 배열입니다 
-					var positions = [
-						{
-								title: '삼성 파르나스', 
-								latlng: new daum.maps.LatLng(37.5088823, 127.0602669)
-						}             
-				];
-
-				var imageSrc = "img/marker.png"; 
-
-				for (var i = 0; i < positions.length; i ++) {
-
-						// 마커 이미지의 이미지 크기 입니다
-						var imageSize = new daum.maps.Size(50, 50); 
-						
-						// 마커 이미지를 생성합니다    
-						var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
-						
-						// 마커를 생성합니다
-						var marker = new daum.maps.Marker({
-								map: map, // 마커를 표시할 지도
-								position: positions[i].latlng, // 마커를 표시할 위치
-								title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-								image : markerImage // 마커 이미지 
-						});
-				}
-
-				
-				var imageSrc = "img/marker.png", // 마커이미지의 주소입니다    
-					imageSize = new daum.maps.Size(50, 50), // 마커이미지의 크기입니다
-					imageOption = {offset: new daum.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-				/* 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-				var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption),
-						markerPosition = new daum.maps.LatLng(37.5088823, 127.0602669); // 마커가 표시될 위치입니다
-
-				// 마커를 생성합니다
-				var marker = new daum.maps.Marker({
-						position: markerPosition, 
-						image: markerImage // 마커이미지 설정 
-				});*/
-
-				// 마커가 지도 위에 표시되도록 설정합니다
-				marker.setMap(map); 
+	<![endif]-->
 
 
-				//click
-				$('.tabN>li>a').on('click',function(e){
-					e.preventDefault();
-						$("#mapBoxView1").remove();
-					
-					//$('.mapBox').css({'visibility':'hidden'})
-					$('#mapBoxView').css({'visibility':'visible'});
 
-					lat = $(this).attr('param').split(":")[0];
-					lat = parseFloat(lat);
-					lng = $(this).attr('param').split(":")[1];
-					lng = parseFloat(lng);
-
-					console.log(lat,lng);
-
-		//카카오맵에 표시될 DOM지정
-		var container = document.getElementById('mapBoxView');
-
-		//표시할 지역의 경도, 위도, 줌레벨 설정
-		var options = {
-			center: new daum.maps.LatLng(lat, lng),
-			level: 4
-		};
-
-		//map 인스턴스 생성
-		var map = new daum.maps.Map(container, options);
-
-		// 마커를 표시할 위치와 title 객체 배열입니다 
-		var positions = [
-			{
-					title: '삼성 파르나스', 
-					latlng: new daum.maps.LatLng(lat, lng)
-			}         
-		];
-
-		var imageSrc = "img/marker.png"; 
-
-		for (var i = 0; i < positions.length; i ++) {
-
-			// 마커 이미지의 이미지 크기 입니다
-			var imageSize = new daum.maps.Size(50, 50); 
-			
-			// 마커 이미지를 생성합니다    
-			var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
-			
-			// 마커를 생성합니다
-			var marker = new daum.maps.Marker({
-					map: map, // 마커를 표시할 지도
-					position: positions[i].latlng, // 마커를 표시할 위치
-					title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-					image : markerImage // 마커 이미지 
-			});
-}
-
-
-var imageSrc = 'img/marker.png', // 마커이미지의 주소입니다    
-imageSize = new daum.maps.Size(50, 50), // 마커이미지의 크기입니다
-imageOption = {offset: new daum.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption),
-markerPosition = new daum.maps.LatLng(lat, lng); // 마커가 표시될 위치입니다
-
-/* 마커를 생성합니다
-var marker = new daum.maps.Marker({
-position: markerPosition, 
-image: markerImage // 마커이미지 설정 
-});*/
-
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map); 
-
-			});//$tab_a
-			
-
-
-}
-		</script>
-	
+출처: https://doolyit.tistory.com/9 [동해둘리의 IT Study]
 </head>
 <body>
 <div class="wrap">
@@ -369,7 +235,7 @@ marker.setMap(map);
 			</div>
 			
 			<div class="videoSec">
-				<span class="vBtn"><i class="fas fa-caret-right"></i></span>
+				<span class="vBtn"><i class="far fa-play-circle"></i></span>
 				<div class="videoImg"><img src="./img/video.jpg" alt=""></div>
 				<div class="videoMovie">
 					<video class="" width="100%" height="240" controls  muted autoplay>
@@ -476,8 +342,8 @@ marker.setMap(map);
 					<h3>STORE LOCATION</h3>
 			</div>
 			<ul class="tabN">
-				<li><a href="mapBoxView" param='37.5088823: 127.0602669'>압구정 현대</a></li>
-				<li><a href="mapBoxView" param='37.5126125:127.100353'>청담샵</a></li>
+				<li><a href="mapBoxView" param='37.5088823: 127.0602669'>삼성 파르나스</a></li>
+				<li><a href="mapBoxView" param='37.5126125:127.100353'>롯데 타워몰</a></li>
 			</ul>
 			<div class="mapBox" id='mapBoxView' ></div>
 			<div class="mapBox" id='mapBoxView1' ></div>

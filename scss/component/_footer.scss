@@ -3,7 +3,7 @@
    
     #footer {
         position:relative; width:940px; height:314px; 
-        margin:0px auto; background: #2b2b2b;
+        margin:0px auto; background: #2b2b2b; font-family:  $fontFamily_arial;
         &::after{content: ''; display: block; clear: both;}
         .fcon1{
           width:300px; float:left;
@@ -20,7 +20,7 @@
 
         }
         .fcon2{
-          float:right;
+          float:right; font-family:  $fontFamily_arial;
           dl{
             float:left; margin-right:80px; margin-top:100px;
             &:last-child{margin-right:0;}

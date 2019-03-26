@@ -83,7 +83,6 @@ a {
       .headerWrap #header ul#gnb > li {
         width: 163px;
         height: 71px;
-        /*border-right: 1px solid #363636; */
         float: left;
         box-sizing: border-box; }
         .headerWrap #header ul#gnb > li > a {
@@ -178,7 +177,8 @@ a {
       background: #000; }
       .headerWrap .showBtnView .inner ul li {
         float: left;
-        margin-right: 27px; }
+        margin-right: 27px;
+        font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
         .headerWrap .showBtnView .inner ul li a {
           display: block;
           color: #fff; }
@@ -341,7 +341,8 @@ a {
   position: relative;
   width: 100%;
   height: 760px;
-  transition: all 0.5s;
+  transition: all 2s;
+  transform: rotate(0.001deg);
   background: #111;
   overflow: hidden; }
   #visual .slideWrap {
@@ -361,19 +362,20 @@ a {
         opacity: 0;
         z-index: 1;
         transition: all 1s;
-        font-size: 200px; }
+        font-size: 200px;
+        transform: rotate(0.001deg); }
         #visual .slideWrap .bg_panel li.top {
           opacity: 0;
-          transform: scale(0.5);
+          transform: scale(0.5) rotate(0.001deg);
           top: -100%; }
         #visual .slideWrap .bg_panel li.on {
           opacity: 1;
-          transform: scale(1);
+          transform: scale(1) rotate(0.001deg);
           z-index: 5;
           top: 0%; }
         #visual .slideWrap .bg_panel li.bottom {
           opacity: 0;
-          transform: scale(0.5);
+          transform: scale(0.5) rotate(0.001deg);
           top: 100%; }
         #visual .slideWrap .bg_panel li#p1 {
           background: url(../img/bg1.jpg) no-repeat 50% 50%;
@@ -410,19 +412,20 @@ a {
             padding: 0px 5px;
             letter-spacing: 3px;
             opacity: 0;
-            transition: 1s 0.5s; }
+            transition: 1s 0.5s;
+            transform: rotate(0.001deg); }
             #visual .slideWrap .bg_panel li > p span:nth-of-type(odd) {
-              transform: translateY(-100px); }
+              transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
             #visual .slideWrap .bg_panel li > p span:nth-of-type(even) {
-              transform: translateY(100px); }
+              transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
         #visual .slideWrap .bg_panel li.on > p::before {
           width: 120px; }
         #visual .slideWrap .bg_panel li.on > p > span {
           opacity: 1; }
         #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(odd) {
-          transform: translateY(0px); }
+          transform: translateY(0px) rotate(0.001deg); }
         #visual .slideWrap .bg_panel li.on > p > span:nth-of-type(even) {
-          transform: translateY(0px); }
+          transform: translateY(0px) rotate(0.001deg); }
     #visual .slideWrap .slide_navi {
       position: absolute;
       bottom: 30%;
@@ -441,7 +444,9 @@ a {
         line-height: 55px;
         text-align: center;
         transition: color 0.3s;
-        margin: 10px 0; }
+        margin: 10px 0;
+        transform: rotate(0.001deg);
+        font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
         #visual .slideWrap .slide_navi ul.navi_motion li:hover a {
           color: white; }
           #visual .slideWrap .slide_navi ul.navi_motion li:hover a div::before {
@@ -540,7 +545,7 @@ a {
       top: 30%;
       transform-origin: left center;
       left: 40px;
-      transform: scale(0.7); }
+      transform: scale(0.7) rotate(0.001deg); }
     #visual .slide_navi {
       font-size: 11px; } }
 /*mobile*/
@@ -574,7 +579,7 @@ a {
       width: 180%;
       top: 30%;
       left: 30px;
-      transform: scale(0.4); }
+      transform: scale(0.4) rotate(0.001deg); }
     #visual .slideWrap .btns {
       position: absolute;
       left: 50px;
@@ -769,7 +774,7 @@ a {
               letter-spacing: 0.7px;
               transition: all 0.3s;
               font-size: 13px;
-              font-family: 'arial';
+              font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif;
               background: #fff;
               border: 0.5px solid #000;
               box-sizing: border-box;
@@ -976,7 +981,8 @@ a {
         letter-spacing: -0.03px;
         line-height: 1.75;
         color: #666;
-        margin: 7px 0 50px; }
+        margin: 7px 0 50px;
+        font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
     .contents #con3 .videoSec {
       width: 100%;
       height: 346px;
@@ -1007,10 +1013,8 @@ a {
           right: 30px; }
       .contents #con3 .videoSec .vBtn {
         display: block;
-        width: 50px;
-        height: 50px;
-        border: 1px solid #fff;
-        border-radius: 25px;
+        width: 60px;
+        height: 60px;
         position: absolute;
         top: 50%;
         margin-top: -25px;
@@ -1021,9 +1025,9 @@ a {
           background: rgba(255, 255, 255, 0.5); }
         .contents #con3 .videoSec .vBtn i {
           position: absolute;
-          top: 9px;
-          margin-left: -3px;
-          font-size: 32px;
+          top: 0px;
+          left: 0;
+          font-size: 60px;
           text-align: center; }
     .contents #con3 ul.iconSec {
       width: 940px;
@@ -1036,7 +1040,8 @@ a {
         width: 25%;
         position: relative;
         float: left;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
         .contents #con3 ul.iconSec li::after {
           content: "";
           position: absolute;
@@ -1067,7 +1072,8 @@ a {
               color: #161616;
               text-align: center; }
           .contents #con3 ul.iconSec li a dl {
-            width: 100%; }
+            width: 100%;
+            font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
             .contents #con3 ul.iconSec li a dl dt {
               font-size: 14px;
               text-align: center;
@@ -1113,13 +1119,15 @@ a {
         etter-spacing: -0.03px;
         line-height: 1.75;
         color: #666;
-        margin: 7px 0 50px; }
+        margin: 7px 0 50px;
+        font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
     .contents #con4 .con4Box1 {
       width: 460px;
       height: 304px;
       background: #fff;
       float: right;
-      border-top: 2px solid #000; }
+      border-top: 2px solid #000;
+      font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
       .contents #con4 .con4Box1::after {
         content: '';
         display: block;
@@ -1144,7 +1152,8 @@ a {
         float: left; }
         .contents #con4 .con4Box1 .Box1Txt dl {
           width: 100%;
-          margin-top: 27px; }
+          margin-top: 27px;
+          font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
           .contents #con4 .con4Box1 .Box1Txt dl dt {
             font-size: 15px;
             color: #222;
@@ -1194,7 +1203,8 @@ a {
             background-size: cover; }
         .contents #con4 .con4Box2 .smBox dl {
           width: 100%;
-          margin-top: 27px; }
+          margin-top: 27px;
+          font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
           .contents #con4 .con4Box2 .smBox dl dt {
             font-size: 15px;
             color: #222;
@@ -1245,7 +1255,7 @@ a {
       text-align: center;
       color: #333;
       font-size: 12px;
-      font-family: 'arial','Nanum Gothic','dotum','AppleSDGothic', 'AppleGothic',sans-serif;
+      font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif;
       margin-right: 8px;
       font-weight: 700;
       padding: 5px 8px;
@@ -2001,7 +2011,8 @@ a {
     width: 940px;
     height: 314px;
     margin: 0px auto;
-    background: #2b2b2b; }
+    background: #2b2b2b;
+    font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
     .footerWrap #footer::after {
       content: '';
       display: block;
@@ -2027,7 +2038,8 @@ a {
         font: 12px/1.2 "arial";
         color: #a6a6a6; }
     .footerWrap #footer .fcon2 {
-      float: right; }
+      float: right;
+      font-family: arial, "Nanum Gothic", "dotum", "AppleSDGothic", "AppleGothic", sans-serif; }
       .footerWrap #footer .fcon2 dl {
         float: left;
         margin-right: 80px;

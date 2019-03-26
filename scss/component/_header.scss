@@ -37,7 +37,7 @@
             float: left; 
             &::after{content: ""; display: block; clear: both;}
             &>li{
-                width: 163px; height: 71px; /*border-right: 1px solid #363636; */
+                width: 163px; height: 71px;
                 float: left; box-sizing: border-box;
                 &>a{
                     @include menuFont();
@@ -53,7 +53,7 @@
                   width:100%; z-index: 10;
                   padding-bottom:40px; display:none;
                   li{
-                    margin-bottom:10px;
+                    margin-bottom:10px; 
                     height:17px; 
                     &:first-child{padding-top:10px;}
                     &>a{
@@ -85,7 +85,7 @@
         padding:45px 20px; background: #000;
         ul{
           li{
-            float:left; margin-right:27px;
+            float:left; margin-right:27px; font-family: $fontFamily_arial;
             a{
               display:block; color:#fff;
               i{font: 19px/1.5;}
